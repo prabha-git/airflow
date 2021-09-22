@@ -1,0 +1,60 @@
+[2021-09-22 15:40:29,244] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: tutorial.templated 2020-05-28T00:00:00+00:00 [queued]>
+[2021-09-22 15:40:29,250] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: tutorial.templated 2020-05-28T00:00:00+00:00 [queued]>
+[2021-09-22 15:40:29,250] {__init__.py:1353} INFO - 
+--------------------------------------------------------------------------------
+[2021-09-22 15:40:29,250] {__init__.py:1354} INFO - Starting attempt 1 of 2
+[2021-09-22 15:40:29,250] {__init__.py:1355} INFO - 
+--------------------------------------------------------------------------------
+[2021-09-22 15:40:29,260] {__init__.py:1374} INFO - Executing <Task(BashOperator): templated> on 2020-05-28T00:00:00+00:00
+[2021-09-22 15:40:29,260] {base_task_runner.py:119} INFO - Running: ['airflow', 'run', 'tutorial', 'templated', '2020-05-28T00:00:00+00:00', '--job_id', '14', '--raw', '-sd', '/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/example_dags/tutorial.py', '--cfg_path', '/tmp/tmpgyyd4pxs']
+[2021-09-22 15:40:30,235] {base_task_runner.py:101} INFO - Job 14: Subtask templated [2021-09-22 15:40:30,234] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2021-09-22 15:40:30,614] {base_task_runner.py:101} INFO - Job 14: Subtask templated [2021-09-22 15:40:30,614] {__init__.py:305} INFO - Filling up the DagBag from /home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/example_dags/tutorial.py
+[2021-09-22 15:40:30,628] {base_task_runner.py:101} INFO - Job 14: Subtask templated [2021-09-22 15:40:30,627] {cli.py:517} INFO - Running <TaskInstance: tutorial.templated 2020-05-28T00:00:00+00:00 [running]> on host XPO-3BMPXT2-L.conway.prod.con-way.com
+[2021-09-22 15:40:30,644] {bash_operator.py:81} INFO - Tmp dir root location: 
+ /tmp
+[2021-09-22 15:40:30,644] {bash_operator.py:90} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_ID=tutorial
+AIRFLOW_CTX_TASK_ID=templated
+AIRFLOW_CTX_EXECUTION_DATE=2020-05-28T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=backfill_2020-05-28T00:00:00+00:00
+[2021-09-22 15:40:30,645] {bash_operator.py:104} INFO - Temporary script location: /tmp/airflowtmppnj0rgda/templatedyi8x56e0
+[2021-09-22 15:40:30,645] {bash_operator.py:114} INFO - Running command: 
+
+    echo "2020-05-28"
+    echo "2020-06-04"
+    echo "Parameter I passed in"
+
+    echo "2020-05-28"
+    echo "2020-06-04"
+    echo "Parameter I passed in"
+
+    echo "2020-05-28"
+    echo "2020-06-04"
+    echo "Parameter I passed in"
+
+    echo "2020-05-28"
+    echo "2020-06-04"
+    echo "Parameter I passed in"
+
+    echo "2020-05-28"
+    echo "2020-06-04"
+    echo "Parameter I passed in"
+
+[2021-09-22 15:40:30,736] {bash_operator.py:123} INFO - Output:
+[2021-09-22 15:40:30,745] {bash_operator.py:127} INFO - 2020-05-28
+[2021-09-22 15:40:30,745] {bash_operator.py:127} INFO - 2020-06-04
+[2021-09-22 15:40:30,745] {bash_operator.py:127} INFO - Parameter I passed in
+[2021-09-22 15:40:30,745] {bash_operator.py:127} INFO - 2020-05-28
+[2021-09-22 15:40:30,745] {bash_operator.py:127} INFO - 2020-06-04
+[2021-09-22 15:40:30,745] {bash_operator.py:127} INFO - Parameter I passed in
+[2021-09-22 15:40:30,745] {bash_operator.py:127} INFO - 2020-05-28
+[2021-09-22 15:40:30,745] {bash_operator.py:127} INFO - 2020-06-04
+[2021-09-22 15:40:30,745] {bash_operator.py:127} INFO - Parameter I passed in
+[2021-09-22 15:40:30,745] {bash_operator.py:127} INFO - 2020-05-28
+[2021-09-22 15:40:30,746] {bash_operator.py:127} INFO - 2020-06-04
+[2021-09-22 15:40:30,746] {bash_operator.py:127} INFO - Parameter I passed in
+[2021-09-22 15:40:30,746] {bash_operator.py:127} INFO - 2020-05-28
+[2021-09-22 15:40:30,746] {bash_operator.py:127} INFO - 2020-06-04
+[2021-09-22 15:40:30,746] {bash_operator.py:127} INFO - Parameter I passed in
+[2021-09-22 15:40:30,746] {bash_operator.py:131} INFO - Command exited with return code 0
+[2021-09-22 15:40:34,245] {logging_mixin.py:95} INFO - [2021-09-22 15:40:34,245] {jobs.py:2562} INFO - Task exited with return code 0

@@ -1,0 +1,25 @@
+[2021-09-22 15:39:21,477] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: tutorial.print_date 2021-09-20T00:00:00+00:00 [queued]>
+[2021-09-22 15:39:21,480] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: tutorial.print_date 2021-09-20T00:00:00+00:00 [queued]>
+[2021-09-22 15:39:21,480] {__init__.py:1353} INFO - 
+--------------------------------------------------------------------------------
+[2021-09-22 15:39:21,480] {__init__.py:1354} INFO - Starting attempt 1 of 2
+[2021-09-22 15:39:21,480] {__init__.py:1355} INFO - 
+--------------------------------------------------------------------------------
+[2021-09-22 15:39:21,490] {__init__.py:1374} INFO - Executing <Task(BashOperator): print_date> on 2021-09-20T00:00:00+00:00
+[2021-09-22 15:39:21,491] {base_task_runner.py:119} INFO - Running: ['airflow', 'run', 'tutorial', 'print_date', '2021-09-20T00:00:00+00:00', '--job_id', '3', '--raw', '-sd', '/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/example_dags/tutorial.py', '--cfg_path', '/tmp/tmpss3l1fjc']
+[2021-09-22 15:39:22,433] {base_task_runner.py:101} INFO - Job 3: Subtask print_date [2021-09-22 15:39:22,433] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2021-09-22 15:39:22,800] {base_task_runner.py:101} INFO - Job 3: Subtask print_date [2021-09-22 15:39:22,800] {__init__.py:305} INFO - Filling up the DagBag from /home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/example_dags/tutorial.py
+[2021-09-22 15:39:22,814] {base_task_runner.py:101} INFO - Job 3: Subtask print_date [2021-09-22 15:39:22,814] {cli.py:517} INFO - Running <TaskInstance: tutorial.print_date 2021-09-20T00:00:00+00:00 [running]> on host XPO-3BMPXT2-L.conway.prod.con-way.com
+[2021-09-22 15:39:22,827] {bash_operator.py:81} INFO - Tmp dir root location: 
+ /tmp
+[2021-09-22 15:39:22,827] {bash_operator.py:90} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_ID=tutorial
+AIRFLOW_CTX_TASK_ID=print_date
+AIRFLOW_CTX_EXECUTION_DATE=2021-09-20T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-09-20T00:00:00+00:00
+[2021-09-22 15:39:22,828] {bash_operator.py:104} INFO - Temporary script location: /tmp/airflowtmpsg8m1025/print_dateght7lo6k
+[2021-09-22 15:39:22,828] {bash_operator.py:114} INFO - Running command: date
+[2021-09-22 15:39:22,918] {bash_operator.py:123} INFO - Output:
+[2021-09-22 15:39:23,068] {bash_operator.py:127} INFO - Wed Sep 22 15:39:23 EDT 2021
+[2021-09-22 15:39:23,069] {bash_operator.py:131} INFO - Command exited with return code 0
+[2021-09-22 15:39:26,461] {logging_mixin.py:95} INFO - [2021-09-22 15:39:26,461] {jobs.py:2562} INFO - Task exited with return code 0

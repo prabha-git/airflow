@@ -1,0 +1,1518 @@
+[2021-09-22 16:10:56,688] {jobs.py:398} INFO - Started process (PID=4174) to work on /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:10:56,697] {jobs.py:1711} INFO - Processing file /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py for tasks to queue
+[2021-09-22 16:10:56,698] {logging_mixin.py:95} INFO - [2021-09-22 16:10:56,698] {__init__.py:305} INFO - Filling up the DagBag from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:10:56,933] {logging_mixin.py:95} INFO - [2021-09-22 16:10:56,924] {__init__.py:416} ERROR - Failed to import: /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3016, in _dep_map
+    return self.__dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _DistInfoDistribution__dep_map
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3007, in _parsed_pkg_info
+    return self._pkg_info
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _pkg_info
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/models/__init__.py", line 413, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/home/prabha/anaconda3/envs/python37/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py", line 3, in <module>
+    from airflow.contrib.operators.bigquery_operator import BigQueryOperator
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py", line 22, in <module>
+    from airflow.contrib.hooks.bigquery_hook import BigQueryHook
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/hooks/bigquery_hook.py", line 37, in <module>
+    from googleapiclient.discovery import build
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/discovery.py", line 62, in <module>
+    from googleapiclient.http import build_http
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/http.py", line 61, in <module>
+    from googleapiclient.model import JsonModel
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/model.py", line 34, in <module>
+    _LIBRARY_VERSION = pkg_resources.get_distribution("google-api-python-client").version
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 466, in get_distribution
+    dist = get_provider(dist)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 342, in get_provider
+    return working_set.find(moduleOrReq) or require(str(moduleOrReq))[0]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 886, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 780, in resolve
+    new_requirements = dist.requires(req.extras)[::-1]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2734, in requires
+    dm = self._dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3018, in _dep_map
+    self.__dep_map = self._compute_dependencies()
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3027, in _compute_dependencies
+    for req in self._parsed_pkg_info.get_all('Requires-Dist') or []:
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3009, in _parsed_pkg_info
+    metadata = self.get_metadata(self.PKG_INFO)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1407, in get_metadata
+    value = self._get(path)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1611, in _get
+    with open(path, 'rb') as stream:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/urllib3-1.26.6.dist-info/METADATA'
+[2021-09-22 16:10:56,937] {jobs.py:1725} WARNING - No viable dags retrieved from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:10:56,987] {jobs.py:406} INFO - Processing /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py took 0.299 seconds
+[2021-09-22 16:11:36,713] {jobs.py:398} INFO - Started process (PID=4222) to work on /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:11:36,719] {jobs.py:1711} INFO - Processing file /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py for tasks to queue
+[2021-09-22 16:11:36,719] {logging_mixin.py:95} INFO - [2021-09-22 16:11:36,719] {__init__.py:305} INFO - Filling up the DagBag from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:11:36,967] {logging_mixin.py:95} INFO - [2021-09-22 16:11:36,959] {__init__.py:416} ERROR - Failed to import: /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3016, in _dep_map
+    return self.__dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _DistInfoDistribution__dep_map
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3007, in _parsed_pkg_info
+    return self._pkg_info
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _pkg_info
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/models/__init__.py", line 413, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/home/prabha/anaconda3/envs/python37/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py", line 3, in <module>
+    from airflow.contrib.operators.bigquery_operator import BigQueryOperator
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py", line 22, in <module>
+    from airflow.contrib.hooks.bigquery_hook import BigQueryHook
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/hooks/bigquery_hook.py", line 37, in <module>
+    from googleapiclient.discovery import build
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/discovery.py", line 62, in <module>
+    from googleapiclient.http import build_http
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/http.py", line 61, in <module>
+    from googleapiclient.model import JsonModel
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/model.py", line 34, in <module>
+    _LIBRARY_VERSION = pkg_resources.get_distribution("google-api-python-client").version
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 466, in get_distribution
+    dist = get_provider(dist)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 342, in get_provider
+    return working_set.find(moduleOrReq) or require(str(moduleOrReq))[0]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 886, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 780, in resolve
+    new_requirements = dist.requires(req.extras)[::-1]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2734, in requires
+    dm = self._dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3018, in _dep_map
+    self.__dep_map = self._compute_dependencies()
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3027, in _compute_dependencies
+    for req in self._parsed_pkg_info.get_all('Requires-Dist') or []:
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3009, in _parsed_pkg_info
+    metadata = self.get_metadata(self.PKG_INFO)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1407, in get_metadata
+    value = self._get(path)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1611, in _get
+    with open(path, 'rb') as stream:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/urllib3-1.26.6.dist-info/METADATA'
+[2021-09-22 16:11:36,967] {jobs.py:1725} WARNING - No viable dags retrieved from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:11:36,989] {jobs.py:406} INFO - Processing /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py took 0.276 seconds
+[2021-09-22 16:12:16,724] {jobs.py:398} INFO - Started process (PID=4270) to work on /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:12:16,728] {jobs.py:1711} INFO - Processing file /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py for tasks to queue
+[2021-09-22 16:12:16,729] {logging_mixin.py:95} INFO - [2021-09-22 16:12:16,729] {__init__.py:305} INFO - Filling up the DagBag from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:12:16,961] {logging_mixin.py:95} INFO - [2021-09-22 16:12:16,953] {__init__.py:416} ERROR - Failed to import: /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3016, in _dep_map
+    return self.__dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _DistInfoDistribution__dep_map
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3007, in _parsed_pkg_info
+    return self._pkg_info
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _pkg_info
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/models/__init__.py", line 413, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/home/prabha/anaconda3/envs/python37/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py", line 3, in <module>
+    from airflow.contrib.operators.bigquery_operator import BigQueryOperator
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py", line 22, in <module>
+    from airflow.contrib.hooks.bigquery_hook import BigQueryHook
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/hooks/bigquery_hook.py", line 37, in <module>
+    from googleapiclient.discovery import build
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/discovery.py", line 62, in <module>
+    from googleapiclient.http import build_http
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/http.py", line 61, in <module>
+    from googleapiclient.model import JsonModel
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/model.py", line 34, in <module>
+    _LIBRARY_VERSION = pkg_resources.get_distribution("google-api-python-client").version
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 466, in get_distribution
+    dist = get_provider(dist)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 342, in get_provider
+    return working_set.find(moduleOrReq) or require(str(moduleOrReq))[0]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 886, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 780, in resolve
+    new_requirements = dist.requires(req.extras)[::-1]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2734, in requires
+    dm = self._dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3018, in _dep_map
+    self.__dep_map = self._compute_dependencies()
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3027, in _compute_dependencies
+    for req in self._parsed_pkg_info.get_all('Requires-Dist') or []:
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3009, in _parsed_pkg_info
+    metadata = self.get_metadata(self.PKG_INFO)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1407, in get_metadata
+    value = self._get(path)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1611, in _get
+    with open(path, 'rb') as stream:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/urllib3-1.26.6.dist-info/METADATA'
+[2021-09-22 16:12:16,961] {jobs.py:1725} WARNING - No viable dags retrieved from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:12:16,977] {jobs.py:406} INFO - Processing /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py took 0.253 seconds
+[2021-09-22 16:12:56,768] {jobs.py:398} INFO - Started process (PID=4326) to work on /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:12:56,773] {jobs.py:1711} INFO - Processing file /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py for tasks to queue
+[2021-09-22 16:12:56,773] {logging_mixin.py:95} INFO - [2021-09-22 16:12:56,773] {__init__.py:305} INFO - Filling up the DagBag from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:12:56,991] {logging_mixin.py:95} INFO - [2021-09-22 16:12:56,984] {__init__.py:416} ERROR - Failed to import: /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3016, in _dep_map
+    return self.__dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _DistInfoDistribution__dep_map
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3007, in _parsed_pkg_info
+    return self._pkg_info
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _pkg_info
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/models/__init__.py", line 413, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/home/prabha/anaconda3/envs/python37/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py", line 3, in <module>
+    from airflow.contrib.operators.bigquery_operator import BigQueryOperator
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py", line 22, in <module>
+    from airflow.contrib.hooks.bigquery_hook import BigQueryHook
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/hooks/bigquery_hook.py", line 37, in <module>
+    from googleapiclient.discovery import build
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/discovery.py", line 62, in <module>
+    from googleapiclient.http import build_http
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/http.py", line 61, in <module>
+    from googleapiclient.model import JsonModel
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/model.py", line 34, in <module>
+    _LIBRARY_VERSION = pkg_resources.get_distribution("google-api-python-client").version
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 466, in get_distribution
+    dist = get_provider(dist)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 342, in get_provider
+    return working_set.find(moduleOrReq) or require(str(moduleOrReq))[0]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 886, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 780, in resolve
+    new_requirements = dist.requires(req.extras)[::-1]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2734, in requires
+    dm = self._dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3018, in _dep_map
+    self.__dep_map = self._compute_dependencies()
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3027, in _compute_dependencies
+    for req in self._parsed_pkg_info.get_all('Requires-Dist') or []:
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3009, in _parsed_pkg_info
+    metadata = self.get_metadata(self.PKG_INFO)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1407, in get_metadata
+    value = self._get(path)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1611, in _get
+    with open(path, 'rb') as stream:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/urllib3-1.26.6.dist-info/METADATA'
+[2021-09-22 16:12:56,992] {jobs.py:1725} WARNING - No viable dags retrieved from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:12:57,015] {jobs.py:406} INFO - Processing /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py took 0.247 seconds
+[2021-09-22 16:13:36,778] {jobs.py:398} INFO - Started process (PID=4374) to work on /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:13:36,783] {jobs.py:1711} INFO - Processing file /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py for tasks to queue
+[2021-09-22 16:13:36,783] {logging_mixin.py:95} INFO - [2021-09-22 16:13:36,783] {__init__.py:305} INFO - Filling up the DagBag from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:13:37,007] {logging_mixin.py:95} INFO - [2021-09-22 16:13:36,999] {__init__.py:416} ERROR - Failed to import: /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3016, in _dep_map
+    return self.__dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _DistInfoDistribution__dep_map
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3007, in _parsed_pkg_info
+    return self._pkg_info
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _pkg_info
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/models/__init__.py", line 413, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/home/prabha/anaconda3/envs/python37/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py", line 3, in <module>
+    from airflow.contrib.operators.bigquery_operator import BigQueryOperator
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py", line 22, in <module>
+    from airflow.contrib.hooks.bigquery_hook import BigQueryHook
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/hooks/bigquery_hook.py", line 37, in <module>
+    from googleapiclient.discovery import build
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/discovery.py", line 62, in <module>
+    from googleapiclient.http import build_http
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/http.py", line 61, in <module>
+    from googleapiclient.model import JsonModel
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/model.py", line 34, in <module>
+    _LIBRARY_VERSION = pkg_resources.get_distribution("google-api-python-client").version
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 466, in get_distribution
+    dist = get_provider(dist)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 342, in get_provider
+    return working_set.find(moduleOrReq) or require(str(moduleOrReq))[0]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 886, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 780, in resolve
+    new_requirements = dist.requires(req.extras)[::-1]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2734, in requires
+    dm = self._dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3018, in _dep_map
+    self.__dep_map = self._compute_dependencies()
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3027, in _compute_dependencies
+    for req in self._parsed_pkg_info.get_all('Requires-Dist') or []:
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3009, in _parsed_pkg_info
+    metadata = self.get_metadata(self.PKG_INFO)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1407, in get_metadata
+    value = self._get(path)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1611, in _get
+    with open(path, 'rb') as stream:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/urllib3-1.26.6.dist-info/METADATA'
+[2021-09-22 16:13:37,007] {jobs.py:1725} WARNING - No viable dags retrieved from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:13:37,023] {jobs.py:406} INFO - Processing /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py took 0.245 seconds
+[2021-09-22 16:14:16,821] {jobs.py:398} INFO - Started process (PID=4422) to work on /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:14:16,827] {jobs.py:1711} INFO - Processing file /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py for tasks to queue
+[2021-09-22 16:14:16,827] {logging_mixin.py:95} INFO - [2021-09-22 16:14:16,827] {__init__.py:305} INFO - Filling up the DagBag from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:14:17,056] {logging_mixin.py:95} INFO - [2021-09-22 16:14:17,049] {__init__.py:416} ERROR - Failed to import: /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3016, in _dep_map
+    return self.__dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _DistInfoDistribution__dep_map
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3007, in _parsed_pkg_info
+    return self._pkg_info
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _pkg_info
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/models/__init__.py", line 413, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/home/prabha/anaconda3/envs/python37/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py", line 3, in <module>
+    from airflow.contrib.operators.bigquery_operator import BigQueryOperator
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py", line 22, in <module>
+    from airflow.contrib.hooks.bigquery_hook import BigQueryHook
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/hooks/bigquery_hook.py", line 37, in <module>
+    from googleapiclient.discovery import build
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/discovery.py", line 62, in <module>
+    from googleapiclient.http import build_http
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/http.py", line 61, in <module>
+    from googleapiclient.model import JsonModel
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/model.py", line 34, in <module>
+    _LIBRARY_VERSION = pkg_resources.get_distribution("google-api-python-client").version
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 466, in get_distribution
+    dist = get_provider(dist)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 342, in get_provider
+    return working_set.find(moduleOrReq) or require(str(moduleOrReq))[0]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 886, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 780, in resolve
+    new_requirements = dist.requires(req.extras)[::-1]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2734, in requires
+    dm = self._dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3018, in _dep_map
+    self.__dep_map = self._compute_dependencies()
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3027, in _compute_dependencies
+    for req in self._parsed_pkg_info.get_all('Requires-Dist') or []:
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3009, in _parsed_pkg_info
+    metadata = self.get_metadata(self.PKG_INFO)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1407, in get_metadata
+    value = self._get(path)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1611, in _get
+    with open(path, 'rb') as stream:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/urllib3-1.26.6.dist-info/METADATA'
+[2021-09-22 16:14:17,057] {jobs.py:1725} WARNING - No viable dags retrieved from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:14:17,081] {jobs.py:406} INFO - Processing /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py took 0.260 seconds
+[2021-09-22 16:14:56,829] {jobs.py:398} INFO - Started process (PID=4478) to work on /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:14:56,834] {jobs.py:1711} INFO - Processing file /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py for tasks to queue
+[2021-09-22 16:14:56,834] {logging_mixin.py:95} INFO - [2021-09-22 16:14:56,834] {__init__.py:305} INFO - Filling up the DagBag from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:14:57,076] {logging_mixin.py:95} INFO - [2021-09-22 16:14:57,069] {__init__.py:416} ERROR - Failed to import: /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3016, in _dep_map
+    return self.__dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _DistInfoDistribution__dep_map
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3007, in _parsed_pkg_info
+    return self._pkg_info
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _pkg_info
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/models/__init__.py", line 413, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/home/prabha/anaconda3/envs/python37/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py", line 3, in <module>
+    from airflow.contrib.operators.bigquery_operator import BigQueryOperator
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py", line 22, in <module>
+    from airflow.contrib.hooks.bigquery_hook import BigQueryHook
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/hooks/bigquery_hook.py", line 37, in <module>
+    from googleapiclient.discovery import build
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/discovery.py", line 62, in <module>
+    from googleapiclient.http import build_http
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/http.py", line 61, in <module>
+    from googleapiclient.model import JsonModel
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/model.py", line 34, in <module>
+    _LIBRARY_VERSION = pkg_resources.get_distribution("google-api-python-client").version
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 466, in get_distribution
+    dist = get_provider(dist)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 342, in get_provider
+    return working_set.find(moduleOrReq) or require(str(moduleOrReq))[0]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 886, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 780, in resolve
+    new_requirements = dist.requires(req.extras)[::-1]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2734, in requires
+    dm = self._dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3018, in _dep_map
+    self.__dep_map = self._compute_dependencies()
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3027, in _compute_dependencies
+    for req in self._parsed_pkg_info.get_all('Requires-Dist') or []:
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3009, in _parsed_pkg_info
+    metadata = self.get_metadata(self.PKG_INFO)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1407, in get_metadata
+    value = self._get(path)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1611, in _get
+    with open(path, 'rb') as stream:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/urllib3-1.26.6.dist-info/METADATA'
+[2021-09-22 16:14:57,077] {jobs.py:1725} WARNING - No viable dags retrieved from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:14:57,099] {jobs.py:406} INFO - Processing /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py took 0.270 seconds
+[2021-09-22 16:15:36,873] {jobs.py:398} INFO - Started process (PID=4526) to work on /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:15:36,877] {jobs.py:1711} INFO - Processing file /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py for tasks to queue
+[2021-09-22 16:15:36,878] {logging_mixin.py:95} INFO - [2021-09-22 16:15:36,878] {__init__.py:305} INFO - Filling up the DagBag from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:15:37,093] {logging_mixin.py:95} INFO - [2021-09-22 16:15:37,086] {__init__.py:416} ERROR - Failed to import: /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3016, in _dep_map
+    return self.__dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _DistInfoDistribution__dep_map
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3007, in _parsed_pkg_info
+    return self._pkg_info
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _pkg_info
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/models/__init__.py", line 413, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/home/prabha/anaconda3/envs/python37/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py", line 3, in <module>
+    from airflow.contrib.operators.bigquery_operator import BigQueryOperator
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py", line 22, in <module>
+    from airflow.contrib.hooks.bigquery_hook import BigQueryHook
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/hooks/bigquery_hook.py", line 37, in <module>
+    from googleapiclient.discovery import build
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/discovery.py", line 62, in <module>
+    from googleapiclient.http import build_http
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/http.py", line 61, in <module>
+    from googleapiclient.model import JsonModel
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/model.py", line 34, in <module>
+    _LIBRARY_VERSION = pkg_resources.get_distribution("google-api-python-client").version
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 466, in get_distribution
+    dist = get_provider(dist)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 342, in get_provider
+    return working_set.find(moduleOrReq) or require(str(moduleOrReq))[0]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 886, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 780, in resolve
+    new_requirements = dist.requires(req.extras)[::-1]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2734, in requires
+    dm = self._dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3018, in _dep_map
+    self.__dep_map = self._compute_dependencies()
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3027, in _compute_dependencies
+    for req in self._parsed_pkg_info.get_all('Requires-Dist') or []:
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3009, in _parsed_pkg_info
+    metadata = self.get_metadata(self.PKG_INFO)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1407, in get_metadata
+    value = self._get(path)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1611, in _get
+    with open(path, 'rb') as stream:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/urllib3-1.26.6.dist-info/METADATA'
+[2021-09-22 16:15:37,094] {jobs.py:1725} WARNING - No viable dags retrieved from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:15:37,109] {jobs.py:406} INFO - Processing /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py took 0.236 seconds
+[2021-09-22 16:16:16,881] {jobs.py:398} INFO - Started process (PID=4574) to work on /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:16:16,885] {jobs.py:1711} INFO - Processing file /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py for tasks to queue
+[2021-09-22 16:16:16,886] {logging_mixin.py:95} INFO - [2021-09-22 16:16:16,886] {__init__.py:305} INFO - Filling up the DagBag from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:16:17,109] {logging_mixin.py:95} INFO - [2021-09-22 16:16:17,101] {__init__.py:416} ERROR - Failed to import: /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3016, in _dep_map
+    return self.__dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _DistInfoDistribution__dep_map
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3007, in _parsed_pkg_info
+    return self._pkg_info
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _pkg_info
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/models/__init__.py", line 413, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/home/prabha/anaconda3/envs/python37/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py", line 3, in <module>
+    from airflow.contrib.operators.bigquery_operator import BigQueryOperator
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py", line 22, in <module>
+    from airflow.contrib.hooks.bigquery_hook import BigQueryHook
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/hooks/bigquery_hook.py", line 37, in <module>
+    from googleapiclient.discovery import build
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/discovery.py", line 62, in <module>
+    from googleapiclient.http import build_http
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/http.py", line 61, in <module>
+    from googleapiclient.model import JsonModel
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/model.py", line 34, in <module>
+    _LIBRARY_VERSION = pkg_resources.get_distribution("google-api-python-client").version
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 466, in get_distribution
+    dist = get_provider(dist)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 342, in get_provider
+    return working_set.find(moduleOrReq) or require(str(moduleOrReq))[0]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 886, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 780, in resolve
+    new_requirements = dist.requires(req.extras)[::-1]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2734, in requires
+    dm = self._dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3018, in _dep_map
+    self.__dep_map = self._compute_dependencies()
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3027, in _compute_dependencies
+    for req in self._parsed_pkg_info.get_all('Requires-Dist') or []:
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3009, in _parsed_pkg_info
+    metadata = self.get_metadata(self.PKG_INFO)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1407, in get_metadata
+    value = self._get(path)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1611, in _get
+    with open(path, 'rb') as stream:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/urllib3-1.26.6.dist-info/METADATA'
+[2021-09-22 16:16:17,109] {jobs.py:1725} WARNING - No viable dags retrieved from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:16:17,130] {jobs.py:406} INFO - Processing /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py took 0.249 seconds
+[2021-09-22 16:16:56,925] {jobs.py:398} INFO - Started process (PID=4622) to work on /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:16:56,929] {jobs.py:1711} INFO - Processing file /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py for tasks to queue
+[2021-09-22 16:16:56,930] {logging_mixin.py:95} INFO - [2021-09-22 16:16:56,930] {__init__.py:305} INFO - Filling up the DagBag from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:16:57,142] {logging_mixin.py:95} INFO - [2021-09-22 16:16:57,134] {__init__.py:416} ERROR - Failed to import: /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3016, in _dep_map
+    return self.__dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _DistInfoDistribution__dep_map
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3007, in _parsed_pkg_info
+    return self._pkg_info
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _pkg_info
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/models/__init__.py", line 413, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/home/prabha/anaconda3/envs/python37/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py", line 3, in <module>
+    from airflow.contrib.operators.bigquery_operator import BigQueryOperator
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py", line 22, in <module>
+    from airflow.contrib.hooks.bigquery_hook import BigQueryHook
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/hooks/bigquery_hook.py", line 37, in <module>
+    from googleapiclient.discovery import build
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/discovery.py", line 62, in <module>
+    from googleapiclient.http import build_http
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/http.py", line 61, in <module>
+    from googleapiclient.model import JsonModel
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/model.py", line 34, in <module>
+    _LIBRARY_VERSION = pkg_resources.get_distribution("google-api-python-client").version
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 466, in get_distribution
+    dist = get_provider(dist)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 342, in get_provider
+    return working_set.find(moduleOrReq) or require(str(moduleOrReq))[0]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 886, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 780, in resolve
+    new_requirements = dist.requires(req.extras)[::-1]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2734, in requires
+    dm = self._dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3018, in _dep_map
+    self.__dep_map = self._compute_dependencies()
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3027, in _compute_dependencies
+    for req in self._parsed_pkg_info.get_all('Requires-Dist') or []:
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3009, in _parsed_pkg_info
+    metadata = self.get_metadata(self.PKG_INFO)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1407, in get_metadata
+    value = self._get(path)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1611, in _get
+    with open(path, 'rb') as stream:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/urllib3-1.26.6.dist-info/METADATA'
+[2021-09-22 16:16:57,142] {jobs.py:1725} WARNING - No viable dags retrieved from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:16:57,165] {jobs.py:406} INFO - Processing /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py took 0.240 seconds
+[2021-09-22 16:17:36,933] {jobs.py:398} INFO - Started process (PID=4678) to work on /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:17:36,937] {jobs.py:1711} INFO - Processing file /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py for tasks to queue
+[2021-09-22 16:17:36,937] {logging_mixin.py:95} INFO - [2021-09-22 16:17:36,937] {__init__.py:305} INFO - Filling up the DagBag from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:17:37,157] {logging_mixin.py:95} INFO - [2021-09-22 16:17:37,150] {__init__.py:416} ERROR - Failed to import: /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3016, in _dep_map
+    return self.__dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _DistInfoDistribution__dep_map
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3007, in _parsed_pkg_info
+    return self._pkg_info
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _pkg_info
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/models/__init__.py", line 413, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/home/prabha/anaconda3/envs/python37/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py", line 3, in <module>
+    from airflow.contrib.operators.bigquery_operator import BigQueryOperator
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py", line 22, in <module>
+    from airflow.contrib.hooks.bigquery_hook import BigQueryHook
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/hooks/bigquery_hook.py", line 37, in <module>
+    from googleapiclient.discovery import build
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/discovery.py", line 62, in <module>
+    from googleapiclient.http import build_http
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/http.py", line 61, in <module>
+    from googleapiclient.model import JsonModel
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/model.py", line 34, in <module>
+    _LIBRARY_VERSION = pkg_resources.get_distribution("google-api-python-client").version
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 466, in get_distribution
+    dist = get_provider(dist)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 342, in get_provider
+    return working_set.find(moduleOrReq) or require(str(moduleOrReq))[0]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 886, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 780, in resolve
+    new_requirements = dist.requires(req.extras)[::-1]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2734, in requires
+    dm = self._dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3018, in _dep_map
+    self.__dep_map = self._compute_dependencies()
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3027, in _compute_dependencies
+    for req in self._parsed_pkg_info.get_all('Requires-Dist') or []:
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3009, in _parsed_pkg_info
+    metadata = self.get_metadata(self.PKG_INFO)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1407, in get_metadata
+    value = self._get(path)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1611, in _get
+    with open(path, 'rb') as stream:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/urllib3-1.26.6.dist-info/METADATA'
+[2021-09-22 16:17:37,157] {jobs.py:1725} WARNING - No viable dags retrieved from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:17:37,180] {jobs.py:406} INFO - Processing /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py took 0.247 seconds
+[2021-09-22 16:18:16,978] {jobs.py:398} INFO - Started process (PID=4730) to work on /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:18:16,982] {jobs.py:1711} INFO - Processing file /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py for tasks to queue
+[2021-09-22 16:18:16,983] {logging_mixin.py:95} INFO - [2021-09-22 16:18:16,983] {__init__.py:305} INFO - Filling up the DagBag from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:18:17,201] {logging_mixin.py:95} INFO - [2021-09-22 16:18:17,194] {__init__.py:416} ERROR - Failed to import: /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3016, in _dep_map
+    return self.__dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _DistInfoDistribution__dep_map
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3007, in _parsed_pkg_info
+    return self._pkg_info
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _pkg_info
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/models/__init__.py", line 413, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/home/prabha/anaconda3/envs/python37/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py", line 3, in <module>
+    from airflow.contrib.operators.bigquery_operator import BigQueryOperator
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py", line 22, in <module>
+    from airflow.contrib.hooks.bigquery_hook import BigQueryHook
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/hooks/bigquery_hook.py", line 37, in <module>
+    from googleapiclient.discovery import build
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/discovery.py", line 62, in <module>
+    from googleapiclient.http import build_http
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/http.py", line 61, in <module>
+    from googleapiclient.model import JsonModel
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/model.py", line 34, in <module>
+    _LIBRARY_VERSION = pkg_resources.get_distribution("google-api-python-client").version
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 466, in get_distribution
+    dist = get_provider(dist)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 342, in get_provider
+    return working_set.find(moduleOrReq) or require(str(moduleOrReq))[0]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 886, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 780, in resolve
+    new_requirements = dist.requires(req.extras)[::-1]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2734, in requires
+    dm = self._dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3018, in _dep_map
+    self.__dep_map = self._compute_dependencies()
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3027, in _compute_dependencies
+    for req in self._parsed_pkg_info.get_all('Requires-Dist') or []:
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3009, in _parsed_pkg_info
+    metadata = self.get_metadata(self.PKG_INFO)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1407, in get_metadata
+    value = self._get(path)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1611, in _get
+    with open(path, 'rb') as stream:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/urllib3-1.26.6.dist-info/METADATA'
+[2021-09-22 16:18:17,201] {jobs.py:1725} WARNING - No viable dags retrieved from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:18:17,224] {jobs.py:406} INFO - Processing /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py took 0.246 seconds
+[2021-09-22 16:18:57,039] {jobs.py:398} INFO - Started process (PID=4781) to work on /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:18:57,047] {jobs.py:1711} INFO - Processing file /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py for tasks to queue
+[2021-09-22 16:18:57,048] {logging_mixin.py:95} INFO - [2021-09-22 16:18:57,048] {__init__.py:305} INFO - Filling up the DagBag from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:18:57,343] {logging_mixin.py:95} INFO - [2021-09-22 16:18:57,334] {__init__.py:416} ERROR - Failed to import: /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3016, in _dep_map
+    return self.__dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _DistInfoDistribution__dep_map
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3007, in _parsed_pkg_info
+    return self._pkg_info
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _pkg_info
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/models/__init__.py", line 413, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/home/prabha/anaconda3/envs/python37/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py", line 3, in <module>
+    from airflow.contrib.operators.bigquery_operator import BigQueryOperator
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py", line 22, in <module>
+    from airflow.contrib.hooks.bigquery_hook import BigQueryHook
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/hooks/bigquery_hook.py", line 37, in <module>
+    from googleapiclient.discovery import build
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/discovery.py", line 62, in <module>
+    from googleapiclient.http import build_http
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/http.py", line 61, in <module>
+    from googleapiclient.model import JsonModel
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/model.py", line 34, in <module>
+    _LIBRARY_VERSION = pkg_resources.get_distribution("google-api-python-client").version
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 466, in get_distribution
+    dist = get_provider(dist)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 342, in get_provider
+    return working_set.find(moduleOrReq) or require(str(moduleOrReq))[0]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 886, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 780, in resolve
+    new_requirements = dist.requires(req.extras)[::-1]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2734, in requires
+    dm = self._dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3018, in _dep_map
+    self.__dep_map = self._compute_dependencies()
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3027, in _compute_dependencies
+    for req in self._parsed_pkg_info.get_all('Requires-Dist') or []:
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3009, in _parsed_pkg_info
+    metadata = self.get_metadata(self.PKG_INFO)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1407, in get_metadata
+    value = self._get(path)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1611, in _get
+    with open(path, 'rb') as stream:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/urllib3-1.26.6.dist-info/METADATA'
+[2021-09-22 16:18:57,344] {jobs.py:1725} WARNING - No viable dags retrieved from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:18:57,367] {jobs.py:406} INFO - Processing /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py took 0.327 seconds
+[2021-09-22 16:19:37,027] {jobs.py:398} INFO - Started process (PID=4829) to work on /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:19:37,031] {jobs.py:1711} INFO - Processing file /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py for tasks to queue
+[2021-09-22 16:19:37,031] {logging_mixin.py:95} INFO - [2021-09-22 16:19:37,031] {__init__.py:305} INFO - Filling up the DagBag from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:19:37,263] {logging_mixin.py:95} INFO - [2021-09-22 16:19:37,256] {__init__.py:416} ERROR - Failed to import: /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3016, in _dep_map
+    return self.__dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _DistInfoDistribution__dep_map
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3007, in _parsed_pkg_info
+    return self._pkg_info
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _pkg_info
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/models/__init__.py", line 413, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/home/prabha/anaconda3/envs/python37/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py", line 3, in <module>
+    from airflow.contrib.operators.bigquery_operator import BigQueryOperator
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py", line 22, in <module>
+    from airflow.contrib.hooks.bigquery_hook import BigQueryHook
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/hooks/bigquery_hook.py", line 37, in <module>
+    from googleapiclient.discovery import build
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/discovery.py", line 62, in <module>
+    from googleapiclient.http import build_http
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/http.py", line 61, in <module>
+    from googleapiclient.model import JsonModel
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/model.py", line 34, in <module>
+    _LIBRARY_VERSION = pkg_resources.get_distribution("google-api-python-client").version
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 466, in get_distribution
+    dist = get_provider(dist)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 342, in get_provider
+    return working_set.find(moduleOrReq) or require(str(moduleOrReq))[0]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 886, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 780, in resolve
+    new_requirements = dist.requires(req.extras)[::-1]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2734, in requires
+    dm = self._dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3018, in _dep_map
+    self.__dep_map = self._compute_dependencies()
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3027, in _compute_dependencies
+    for req in self._parsed_pkg_info.get_all('Requires-Dist') or []:
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3009, in _parsed_pkg_info
+    metadata = self.get_metadata(self.PKG_INFO)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1407, in get_metadata
+    value = self._get(path)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1611, in _get
+    with open(path, 'rb') as stream:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/urllib3-1.26.6.dist-info/METADATA'
+[2021-09-22 16:19:37,263] {jobs.py:1725} WARNING - No viable dags retrieved from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:19:37,288] {jobs.py:406} INFO - Processing /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py took 0.261 seconds
+[2021-09-22 16:20:17,087] {jobs.py:398} INFO - Started process (PID=4885) to work on /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:20:17,091] {jobs.py:1711} INFO - Processing file /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py for tasks to queue
+[2021-09-22 16:20:17,091] {logging_mixin.py:95} INFO - [2021-09-22 16:20:17,091] {__init__.py:305} INFO - Filling up the DagBag from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:20:17,303] {logging_mixin.py:95} INFO - [2021-09-22 16:20:17,296] {__init__.py:416} ERROR - Failed to import: /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3016, in _dep_map
+    return self.__dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _DistInfoDistribution__dep_map
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3007, in _parsed_pkg_info
+    return self._pkg_info
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _pkg_info
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/models/__init__.py", line 413, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/home/prabha/anaconda3/envs/python37/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py", line 3, in <module>
+    from airflow.contrib.operators.bigquery_operator import BigQueryOperator
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py", line 22, in <module>
+    from airflow.contrib.hooks.bigquery_hook import BigQueryHook
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/hooks/bigquery_hook.py", line 37, in <module>
+    from googleapiclient.discovery import build
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/discovery.py", line 62, in <module>
+    from googleapiclient.http import build_http
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/http.py", line 61, in <module>
+    from googleapiclient.model import JsonModel
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/model.py", line 34, in <module>
+    _LIBRARY_VERSION = pkg_resources.get_distribution("google-api-python-client").version
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 466, in get_distribution
+    dist = get_provider(dist)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 342, in get_provider
+    return working_set.find(moduleOrReq) or require(str(moduleOrReq))[0]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 886, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 780, in resolve
+    new_requirements = dist.requires(req.extras)[::-1]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2734, in requires
+    dm = self._dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3018, in _dep_map
+    self.__dep_map = self._compute_dependencies()
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3027, in _compute_dependencies
+    for req in self._parsed_pkg_info.get_all('Requires-Dist') or []:
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3009, in _parsed_pkg_info
+    metadata = self.get_metadata(self.PKG_INFO)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1407, in get_metadata
+    value = self._get(path)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1611, in _get
+    with open(path, 'rb') as stream:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/urllib3-1.26.6.dist-info/METADATA'
+[2021-09-22 16:20:17,304] {jobs.py:1725} WARNING - No viable dags retrieved from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:20:17,327] {jobs.py:406} INFO - Processing /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py took 0.241 seconds
+[2021-09-22 16:20:57,109] {jobs.py:398} INFO - Started process (PID=4933) to work on /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:20:57,113] {jobs.py:1711} INFO - Processing file /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py for tasks to queue
+[2021-09-22 16:20:57,113] {logging_mixin.py:95} INFO - [2021-09-22 16:20:57,113] {__init__.py:305} INFO - Filling up the DagBag from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:20:57,328] {logging_mixin.py:95} INFO - [2021-09-22 16:20:57,321] {__init__.py:416} ERROR - Failed to import: /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3016, in _dep_map
+    return self.__dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _DistInfoDistribution__dep_map
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3007, in _parsed_pkg_info
+    return self._pkg_info
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _pkg_info
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/models/__init__.py", line 413, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/home/prabha/anaconda3/envs/python37/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py", line 3, in <module>
+    from airflow.contrib.operators.bigquery_operator import BigQueryOperator
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py", line 22, in <module>
+    from airflow.contrib.hooks.bigquery_hook import BigQueryHook
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/hooks/bigquery_hook.py", line 37, in <module>
+    from googleapiclient.discovery import build
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/discovery.py", line 62, in <module>
+    from googleapiclient.http import build_http
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/http.py", line 61, in <module>
+    from googleapiclient.model import JsonModel
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/model.py", line 34, in <module>
+    _LIBRARY_VERSION = pkg_resources.get_distribution("google-api-python-client").version
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 466, in get_distribution
+    dist = get_provider(dist)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 342, in get_provider
+    return working_set.find(moduleOrReq) or require(str(moduleOrReq))[0]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 886, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 780, in resolve
+    new_requirements = dist.requires(req.extras)[::-1]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2734, in requires
+    dm = self._dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3018, in _dep_map
+    self.__dep_map = self._compute_dependencies()
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3027, in _compute_dependencies
+    for req in self._parsed_pkg_info.get_all('Requires-Dist') or []:
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3009, in _parsed_pkg_info
+    metadata = self.get_metadata(self.PKG_INFO)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1407, in get_metadata
+    value = self._get(path)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1611, in _get
+    with open(path, 'rb') as stream:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/urllib3-1.26.6.dist-info/METADATA'
+[2021-09-22 16:20:57,328] {jobs.py:1725} WARNING - No viable dags retrieved from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:20:57,352] {jobs.py:406} INFO - Processing /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py took 0.244 seconds
+[2021-09-22 16:21:37,140] {jobs.py:398} INFO - Started process (PID=4981) to work on /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:21:37,145] {jobs.py:1711} INFO - Processing file /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py for tasks to queue
+[2021-09-22 16:21:37,145] {logging_mixin.py:95} INFO - [2021-09-22 16:21:37,145] {__init__.py:305} INFO - Filling up the DagBag from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:21:37,361] {logging_mixin.py:95} INFO - [2021-09-22 16:21:37,354] {__init__.py:416} ERROR - Failed to import: /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3016, in _dep_map
+    return self.__dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _DistInfoDistribution__dep_map
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3007, in _parsed_pkg_info
+    return self._pkg_info
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _pkg_info
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/models/__init__.py", line 413, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/home/prabha/anaconda3/envs/python37/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py", line 3, in <module>
+    from airflow.contrib.operators.bigquery_operator import BigQueryOperator
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py", line 22, in <module>
+    from airflow.contrib.hooks.bigquery_hook import BigQueryHook
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/hooks/bigquery_hook.py", line 37, in <module>
+    from googleapiclient.discovery import build
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/discovery.py", line 62, in <module>
+    from googleapiclient.http import build_http
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/http.py", line 61, in <module>
+    from googleapiclient.model import JsonModel
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/model.py", line 34, in <module>
+    _LIBRARY_VERSION = pkg_resources.get_distribution("google-api-python-client").version
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 466, in get_distribution
+    dist = get_provider(dist)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 342, in get_provider
+    return working_set.find(moduleOrReq) or require(str(moduleOrReq))[0]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 886, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 780, in resolve
+    new_requirements = dist.requires(req.extras)[::-1]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2734, in requires
+    dm = self._dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3018, in _dep_map
+    self.__dep_map = self._compute_dependencies()
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3027, in _compute_dependencies
+    for req in self._parsed_pkg_info.get_all('Requires-Dist') or []:
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3009, in _parsed_pkg_info
+    metadata = self.get_metadata(self.PKG_INFO)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1407, in get_metadata
+    value = self._get(path)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1611, in _get
+    with open(path, 'rb') as stream:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/urllib3-1.26.6.dist-info/METADATA'
+[2021-09-22 16:21:37,361] {jobs.py:1725} WARNING - No viable dags retrieved from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:21:37,386] {jobs.py:406} INFO - Processing /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py took 0.246 seconds
+[2021-09-22 16:22:17,166] {jobs.py:398} INFO - Started process (PID=5037) to work on /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:22:17,172] {jobs.py:1711} INFO - Processing file /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py for tasks to queue
+[2021-09-22 16:22:17,173] {logging_mixin.py:95} INFO - [2021-09-22 16:22:17,173] {__init__.py:305} INFO - Filling up the DagBag from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:22:17,400] {logging_mixin.py:95} INFO - [2021-09-22 16:22:17,393] {__init__.py:416} ERROR - Failed to import: /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3016, in _dep_map
+    return self.__dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _DistInfoDistribution__dep_map
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3007, in _parsed_pkg_info
+    return self._pkg_info
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _pkg_info
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/models/__init__.py", line 413, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/home/prabha/anaconda3/envs/python37/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py", line 3, in <module>
+    from airflow.contrib.operators.bigquery_operator import BigQueryOperator
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py", line 22, in <module>
+    from airflow.contrib.hooks.bigquery_hook import BigQueryHook
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/hooks/bigquery_hook.py", line 37, in <module>
+    from googleapiclient.discovery import build
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/discovery.py", line 62, in <module>
+    from googleapiclient.http import build_http
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/http.py", line 61, in <module>
+    from googleapiclient.model import JsonModel
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/model.py", line 34, in <module>
+    _LIBRARY_VERSION = pkg_resources.get_distribution("google-api-python-client").version
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 466, in get_distribution
+    dist = get_provider(dist)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 342, in get_provider
+    return working_set.find(moduleOrReq) or require(str(moduleOrReq))[0]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 886, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 780, in resolve
+    new_requirements = dist.requires(req.extras)[::-1]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2734, in requires
+    dm = self._dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3018, in _dep_map
+    self.__dep_map = self._compute_dependencies()
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3027, in _compute_dependencies
+    for req in self._parsed_pkg_info.get_all('Requires-Dist') or []:
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3009, in _parsed_pkg_info
+    metadata = self.get_metadata(self.PKG_INFO)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1407, in get_metadata
+    value = self._get(path)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1611, in _get
+    with open(path, 'rb') as stream:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/urllib3-1.26.6.dist-info/METADATA'
+[2021-09-22 16:22:17,401] {jobs.py:1725} WARNING - No viable dags retrieved from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:22:17,425] {jobs.py:406} INFO - Processing /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py took 0.259 seconds
+[2021-09-22 16:22:57,201] {jobs.py:398} INFO - Started process (PID=5085) to work on /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:22:57,205] {jobs.py:1711} INFO - Processing file /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py for tasks to queue
+[2021-09-22 16:22:57,205] {logging_mixin.py:95} INFO - [2021-09-22 16:22:57,205] {__init__.py:305} INFO - Filling up the DagBag from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:22:57,423] {logging_mixin.py:95} INFO - [2021-09-22 16:22:57,415] {__init__.py:416} ERROR - Failed to import: /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3016, in _dep_map
+    return self.__dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _DistInfoDistribution__dep_map
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3007, in _parsed_pkg_info
+    return self._pkg_info
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _pkg_info
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/models/__init__.py", line 413, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/home/prabha/anaconda3/envs/python37/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py", line 3, in <module>
+    from airflow.contrib.operators.bigquery_operator import BigQueryOperator
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py", line 22, in <module>
+    from airflow.contrib.hooks.bigquery_hook import BigQueryHook
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/hooks/bigquery_hook.py", line 37, in <module>
+    from googleapiclient.discovery import build
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/discovery.py", line 62, in <module>
+    from googleapiclient.http import build_http
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/http.py", line 61, in <module>
+    from googleapiclient.model import JsonModel
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/model.py", line 34, in <module>
+    _LIBRARY_VERSION = pkg_resources.get_distribution("google-api-python-client").version
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 466, in get_distribution
+    dist = get_provider(dist)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 342, in get_provider
+    return working_set.find(moduleOrReq) or require(str(moduleOrReq))[0]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 886, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 780, in resolve
+    new_requirements = dist.requires(req.extras)[::-1]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2734, in requires
+    dm = self._dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3018, in _dep_map
+    self.__dep_map = self._compute_dependencies()
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3027, in _compute_dependencies
+    for req in self._parsed_pkg_info.get_all('Requires-Dist') or []:
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3009, in _parsed_pkg_info
+    metadata = self.get_metadata(self.PKG_INFO)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1407, in get_metadata
+    value = self._get(path)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1611, in _get
+    with open(path, 'rb') as stream:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/urllib3-1.26.6.dist-info/METADATA'
+[2021-09-22 16:22:57,423] {jobs.py:1725} WARNING - No viable dags retrieved from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:22:57,445] {jobs.py:406} INFO - Processing /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py took 0.245 seconds
+[2021-09-22 16:23:37,242] {jobs.py:398} INFO - Started process (PID=5133) to work on /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:23:37,249] {jobs.py:1711} INFO - Processing file /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py for tasks to queue
+[2021-09-22 16:23:37,249] {logging_mixin.py:95} INFO - [2021-09-22 16:23:37,249] {__init__.py:305} INFO - Filling up the DagBag from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:23:37,497] {logging_mixin.py:95} INFO - [2021-09-22 16:23:37,486] {__init__.py:416} ERROR - Failed to import: /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3016, in _dep_map
+    return self.__dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _DistInfoDistribution__dep_map
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3007, in _parsed_pkg_info
+    return self._pkg_info
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _pkg_info
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/models/__init__.py", line 413, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/home/prabha/anaconda3/envs/python37/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py", line 3, in <module>
+    from airflow.contrib.operators.bigquery_operator import BigQueryOperator
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py", line 22, in <module>
+    from airflow.contrib.hooks.bigquery_hook import BigQueryHook
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/hooks/bigquery_hook.py", line 37, in <module>
+    from googleapiclient.discovery import build
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/discovery.py", line 62, in <module>
+    from googleapiclient.http import build_http
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/http.py", line 61, in <module>
+    from googleapiclient.model import JsonModel
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/model.py", line 34, in <module>
+    _LIBRARY_VERSION = pkg_resources.get_distribution("google-api-python-client").version
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 466, in get_distribution
+    dist = get_provider(dist)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 342, in get_provider
+    return working_set.find(moduleOrReq) or require(str(moduleOrReq))[0]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 886, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 780, in resolve
+    new_requirements = dist.requires(req.extras)[::-1]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2734, in requires
+    dm = self._dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3018, in _dep_map
+    self.__dep_map = self._compute_dependencies()
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3027, in _compute_dependencies
+    for req in self._parsed_pkg_info.get_all('Requires-Dist') or []:
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3009, in _parsed_pkg_info
+    metadata = self.get_metadata(self.PKG_INFO)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1407, in get_metadata
+    value = self._get(path)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1611, in _get
+    with open(path, 'rb') as stream:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/urllib3-1.26.6.dist-info/METADATA'
+[2021-09-22 16:23:37,498] {jobs.py:1725} WARNING - No viable dags retrieved from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:23:37,522] {jobs.py:406} INFO - Processing /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py took 0.280 seconds
+[2021-09-22 16:24:17,264] {jobs.py:398} INFO - Started process (PID=5181) to work on /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:24:17,270] {jobs.py:1711} INFO - Processing file /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py for tasks to queue
+[2021-09-22 16:24:17,271] {logging_mixin.py:95} INFO - [2021-09-22 16:24:17,271] {__init__.py:305} INFO - Filling up the DagBag from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:24:17,497] {logging_mixin.py:95} INFO - [2021-09-22 16:24:17,490] {__init__.py:416} ERROR - Failed to import: /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3016, in _dep_map
+    return self.__dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _DistInfoDistribution__dep_map
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3007, in _parsed_pkg_info
+    return self._pkg_info
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _pkg_info
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/models/__init__.py", line 413, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/home/prabha/anaconda3/envs/python37/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py", line 3, in <module>
+    from airflow.contrib.operators.bigquery_operator import BigQueryOperator
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py", line 22, in <module>
+    from airflow.contrib.hooks.bigquery_hook import BigQueryHook
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/hooks/bigquery_hook.py", line 37, in <module>
+    from googleapiclient.discovery import build
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/discovery.py", line 62, in <module>
+    from googleapiclient.http import build_http
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/http.py", line 61, in <module>
+    from googleapiclient.model import JsonModel
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/model.py", line 34, in <module>
+    _LIBRARY_VERSION = pkg_resources.get_distribution("google-api-python-client").version
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 466, in get_distribution
+    dist = get_provider(dist)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 342, in get_provider
+    return working_set.find(moduleOrReq) or require(str(moduleOrReq))[0]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 886, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 780, in resolve
+    new_requirements = dist.requires(req.extras)[::-1]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2734, in requires
+    dm = self._dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3018, in _dep_map
+    self.__dep_map = self._compute_dependencies()
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3027, in _compute_dependencies
+    for req in self._parsed_pkg_info.get_all('Requires-Dist') or []:
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3009, in _parsed_pkg_info
+    metadata = self.get_metadata(self.PKG_INFO)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1407, in get_metadata
+    value = self._get(path)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1611, in _get
+    with open(path, 'rb') as stream:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/urllib3-1.26.6.dist-info/METADATA'
+[2021-09-22 16:24:17,497] {jobs.py:1725} WARNING - No viable dags retrieved from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:24:17,519] {jobs.py:406} INFO - Processing /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py took 0.255 seconds
+[2021-09-22 16:24:57,275] {jobs.py:398} INFO - Started process (PID=5237) to work on /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:24:57,279] {jobs.py:1711} INFO - Processing file /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py for tasks to queue
+[2021-09-22 16:24:57,279] {logging_mixin.py:95} INFO - [2021-09-22 16:24:57,279] {__init__.py:305} INFO - Filling up the DagBag from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:24:57,508] {logging_mixin.py:95} INFO - [2021-09-22 16:24:57,500] {__init__.py:416} ERROR - Failed to import: /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3016, in _dep_map
+    return self.__dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _DistInfoDistribution__dep_map
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3007, in _parsed_pkg_info
+    return self._pkg_info
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _pkg_info
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/models/__init__.py", line 413, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/home/prabha/anaconda3/envs/python37/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py", line 3, in <module>
+    from airflow.contrib.operators.bigquery_operator import BigQueryOperator
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py", line 22, in <module>
+    from airflow.contrib.hooks.bigquery_hook import BigQueryHook
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/hooks/bigquery_hook.py", line 37, in <module>
+    from googleapiclient.discovery import build
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/discovery.py", line 62, in <module>
+    from googleapiclient.http import build_http
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/http.py", line 61, in <module>
+    from googleapiclient.model import JsonModel
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/model.py", line 34, in <module>
+    _LIBRARY_VERSION = pkg_resources.get_distribution("google-api-python-client").version
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 466, in get_distribution
+    dist = get_provider(dist)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 342, in get_provider
+    return working_set.find(moduleOrReq) or require(str(moduleOrReq))[0]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 886, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 780, in resolve
+    new_requirements = dist.requires(req.extras)[::-1]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2734, in requires
+    dm = self._dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3018, in _dep_map
+    self.__dep_map = self._compute_dependencies()
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3027, in _compute_dependencies
+    for req in self._parsed_pkg_info.get_all('Requires-Dist') or []:
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3009, in _parsed_pkg_info
+    metadata = self.get_metadata(self.PKG_INFO)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1407, in get_metadata
+    value = self._get(path)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1611, in _get
+    with open(path, 'rb') as stream:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/urllib3-1.26.6.dist-info/METADATA'
+[2021-09-22 16:24:57,508] {jobs.py:1725} WARNING - No viable dags retrieved from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:24:57,528] {jobs.py:406} INFO - Processing /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py took 0.253 seconds
+[2021-09-22 16:25:37,297] {jobs.py:398} INFO - Started process (PID=5287) to work on /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:25:37,303] {jobs.py:1711} INFO - Processing file /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py for tasks to queue
+[2021-09-22 16:25:37,304] {logging_mixin.py:95} INFO - [2021-09-22 16:25:37,303] {__init__.py:305} INFO - Filling up the DagBag from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:25:37,518] {logging_mixin.py:95} INFO - [2021-09-22 16:25:37,510] {__init__.py:416} ERROR - Failed to import: /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3016, in _dep_map
+    return self.__dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _DistInfoDistribution__dep_map
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3007, in _parsed_pkg_info
+    return self._pkg_info
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _pkg_info
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/models/__init__.py", line 413, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/home/prabha/anaconda3/envs/python37/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py", line 3, in <module>
+    from airflow.contrib.operators.bigquery_operator import BigQueryOperator
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py", line 22, in <module>
+    from airflow.contrib.hooks.bigquery_hook import BigQueryHook
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/airflow/contrib/hooks/bigquery_hook.py", line 37, in <module>
+    from googleapiclient.discovery import build
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/discovery.py", line 62, in <module>
+    from googleapiclient.http import build_http
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/http.py", line 61, in <module>
+    from googleapiclient.model import JsonModel
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/googleapiclient/model.py", line 34, in <module>
+    _LIBRARY_VERSION = pkg_resources.get_distribution("google-api-python-client").version
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 466, in get_distribution
+    dist = get_provider(dist)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 342, in get_provider
+    return working_set.find(moduleOrReq) or require(str(moduleOrReq))[0]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 886, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 780, in resolve
+    new_requirements = dist.requires(req.extras)[::-1]
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2734, in requires
+    dm = self._dep_map
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3018, in _dep_map
+    self.__dep_map = self._compute_dependencies()
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3027, in _compute_dependencies
+    for req in self._parsed_pkg_info.get_all('Requires-Dist') or []:
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3009, in _parsed_pkg_info
+    metadata = self.get_metadata(self.PKG_INFO)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1407, in get_metadata
+    value = self._get(path)
+  File "/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1611, in _get
+    with open(path, 'rb') as stream:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/prabha/.local/share/virtualenvs/airflow-1vNRnu2a/lib/python3.7/site-packages/urllib3-1.26.6.dist-info/METADATA'
+[2021-09-22 16:25:37,518] {jobs.py:1725} WARNING - No viable dags retrieved from /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py
+[2021-09-22 16:25:37,541] {jobs.py:406} INFO - Processing /mnt/c/Users/arivalagan.prabhakar/Documents/GithubXPO/airflow/airflow/dags/record_count.py took 0.243 seconds
