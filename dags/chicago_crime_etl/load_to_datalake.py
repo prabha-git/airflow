@@ -11,13 +11,14 @@ class LoadToDataLake:
            'y_coordinate','year','updated_on','latitude','longitude','location']
 
         bq_client = bigquery.Client()
-        dataset_ref = bq_client.dataset(dataset)
-        table_ref=dataset_ref.table(table)
-        table = bq_client.get_table(table_ref)
+        # dataset_ref = bq_client.dataset(dataset)
+        # table_ref=dataset_ref.table(table)
+        # table = bq_client.get_table(table_ref)
+        self.table_id = 'airflow-341215.af_data_lake.crime_data'
+        self.job_config = bigquery.LoadJobConfig(write_disposition="WRITE_APPEND")
         
 
-    def execute_load(self,df_to_insert) -> Boolean:
-        errors = self.bq_client.insert_rows(self.table,df_to_insert)
-        print(errors)
-        assert errors == []
+    def execute_load(self,df_to_insert) -> None:
+        job = self.bq_client.load_table_from_dataframe(df_to_insert,self.table_i,self.job_configß)
+        print(job.result())
 
