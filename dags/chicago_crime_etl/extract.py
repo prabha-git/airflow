@@ -15,7 +15,10 @@ class Extract:
     def execute_extraction(self) -> pd.DataFrame:
 
         crimes = self.client.get_all("ijzp-q8t2",where = self.updated_on_filter)
-        return pd.DataFrame.from_records(crimes)
+        crime_df = pd.DataFrame.from_records(crimes)
+        print(crime_df.head(5))
+        print(crime_df.columns)
+        return crime_df
 
 if __name__=="__main__":
     extract = Extract(dt.datetime.now()+dt.timedelta(days=-3))
