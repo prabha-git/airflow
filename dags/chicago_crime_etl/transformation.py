@@ -2,10 +2,13 @@ import pandas as pd
 import logging
 import numpy as np
 import json
+import datetime as dt
+from datetime import timezone
 
 class Transformation:
     def __init__(self, data : pd.DataFrame) -> None:
-        self.data = data
+	self.data=data
+	self.data['updated_on'] = dt.datetime.now(timezone.utc)
 
     def convert_datatype(self) -> pd.DataFrame:
         logging.info('Starting the datatype conversion')
