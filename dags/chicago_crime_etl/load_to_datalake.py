@@ -10,7 +10,7 @@ class LoadToDataLake:
         self.columns =  ['id','case_number','date','block','iucr','primary_type','description','location_description','arrest','domestic','beat','district','ward','community_area','fbi_code','x_coordinate',
            'y_coordinate','year','updated_on','latitude','longitude','location']
 
-        bq_client = bigquery.Client()
+        self.bq_client = bigquery.Client()
         # dataset_ref = bq_client.dataset(dataset)
         # table_ref=dataset_ref.table(table)
         # table = bq_client.get_table(table_ref)
@@ -19,6 +19,6 @@ class LoadToDataLake:
         
 
     def execute_load(self,df_to_insert) -> None:
-        job = self.bq_client.load_table_from_dataframe(df_to_insert,self.table_i,self.job_configß)
+        job = self.bq_client.load_table_from_dataframe(df_to_insert,self.table_id,self.job_config)
         print(job.result())
 

@@ -13,8 +13,10 @@ import datetime as dt
 def run_etl(ds=None):
 	extract=Extract(dt.datetime.strptime(ds,'%Y-%m-%d'))
 	df = extract.execute_extraction()
+	print("Origina df\n\n",df.dtypes)
 	transform = Transformation(df)
 	transformed_df = transform.convert_datatype()
+	print("Transformed df\n\n",transformed_df.dtypes)
 	load = LoadToDataLake('af_data_lake','crime_data')
 	load.execute_load(transformed_df)
 
@@ -26,7 +28,7 @@ default_args = {
 }
 
 dag = DAG(
-    'chicago_crime_pipeline1',
+    'chicago_crime_pipeline2',
     default_args=default_args,
     start_date=dt.datetime(2022,2,11),
     schedule_interval='0 0 * * *',

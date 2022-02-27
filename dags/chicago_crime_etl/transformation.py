@@ -8,7 +8,7 @@ from datetime import timezone
 class Transformation:
     def __init__(self, data : pd.DataFrame) -> None:
         self.data=data
-        self.data['updated_on'] = dt.datetime.now(timezone.utc)
+        #self.data['updated_on'] = dt.datetime.now(timezone.utc)
 
     def convert_datatype(self) -> pd.DataFrame:
         logging.info('Starting the datatype conversion')
@@ -31,8 +31,8 @@ class Transformation:
             self.data[col] = self.data[col].astype('bool')
         
     
-        self.data['location'] = self.data['location'].apply(lambda x: json.dumps(x))
-        
+        #self.data['location'] = self.data['location'].apply(lambda x: json.dumps(x))
+	self.data['location'] = "Dummy Data"
         self.data = self.data.replace({np.nan: None})
 
         return self.data
