@@ -32,7 +32,7 @@ class Transformation:
         
     
         #self.data['location'] = self.data['location'].apply(lambda x: json.dumps(x))
-	self.data['location'] = "Dummy Data"
+        self.data['location'] = "Dummy Data"
         self.data = self.data.replace({np.nan: None})
 
         return self.data
