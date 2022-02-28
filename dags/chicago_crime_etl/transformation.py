@@ -31,8 +31,9 @@ class Transformation:
             self.data[col] = self.data[col].astype('bool')
         
     
-        #self.data['location'] = self.data['location'].apply(lambda x: json.dumps(x))
-        self.data['location'] = "Dummy Data"
+        #self.data['location'] = self.data['location'].apply(lambda x: json.loads(x))
+        print(self.data['location'])
+	print(type(self.data['location'][0])
         self.data = self.data.replace({np.nan: None})
 
         return self.data
