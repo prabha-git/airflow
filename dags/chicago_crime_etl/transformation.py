@@ -33,7 +33,7 @@ class Transformation:
     
         #self.data['location'] = self.data['location'].apply(lambda x: json.loads(x))
         print(self.data['location'])
-	print(type(self.data['location'][0])
+        print(type(self.data['location'][0]))
         self.data = self.data.replace({np.nan: None})
 
         return self.data
