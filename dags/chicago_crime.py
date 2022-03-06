@@ -15,10 +15,10 @@ def run_etl(ds=None):
 	df = extract.execute_extraction()
 	print("Origina df\n\n",df.dtypes)
 	transform = Transformation(df)
-	transformed_df = transform.convert_datatype()
+	transformed_df = transform.convert_datatype_datalake()
 	print("Transformed df\n\n",transformed_df.dtypes)
 	load = LoadToDataLake('af_data_lake','crime_data')
-	load.execute_load(transformed_df)
+	load.execute_load(df)
 
 default_args = {
     'retries' : 0,
@@ -28,9 +28,9 @@ default_args = {
 }
 
 dag = DAG(
-    'chicago_crime_pipeline2',
+    'chicago_crime_pipeline4',
     default_args=default_args,
-    start_date=dt.datetime(2022,2,16),
+    start_date=dt.datetime(2022,3,1),
     schedule_interval='0 0 * * *',
     catchup=True
 )
