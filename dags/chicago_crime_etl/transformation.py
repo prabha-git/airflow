@@ -38,5 +38,7 @@ class Transformation:
         self.data = self.data.replace({np.nan: None})
 
         self.data['db_updated_on'] = dt.datetime.now()
+        self.data['db_updated_on'] = self.data['db_updated_on'].astype('datetime64[ns]')
 
+        print(self.data['db_updated_on'])
         return self.data

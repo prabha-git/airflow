@@ -18,7 +18,7 @@ def run_etl(ds=None):
 	transformed_df = transform.convert_datatype_datalake()
 	print("Transformed df\n\n",transformed_df.dtypes)
 	load = LoadToDataLake('af_data_lake','crime_data')
-	load.execute_load(df)
+	load.execute_load(transformed_df)
 
 default_args = {
     'retries' : 0,
