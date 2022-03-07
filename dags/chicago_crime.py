@@ -15,13 +15,13 @@ import pendulum
 local_tz = pendulum.timezone('America/Chicago')
 
 def run_etl(ds=None):
-	extract=Extract(dt.datetime.strptime(ds,'%Y-%m-%d'))
-        df = extract.execute_extraction()
-        if df:
-            transform = Transformation(df)
-            transformed_df = transform.convert_datatype_datalake()
-            load = LoadToDataLake('af_data_lake','crime_data')
-            load.execute_load(transformed_df)
+    extract=Extract(dt.datetime.strptime(ds,'%Y-%m-%d'))
+    df = extract.execute_extraction()
+    if df:
+        transform = Transformation(df)
+        transformed_df = transform.convert_datatype_datalake()
+        load = LoadToDataLake('af_data_lake','crime_data')
+        load.execute_load(transformed_df)
 
 default_args = {
     'retries' : 0,
