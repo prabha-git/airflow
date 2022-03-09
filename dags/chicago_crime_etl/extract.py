@@ -1,13 +1,14 @@
 import pandas as pd
 import datetime as dt
 from sodapy import Socrata
+from airflow.hooks.base_hook import BaseHook
 
 class Extract:
     chicago_crime_portal = "https://data.cityofchicago.org/resource/ijzp-q8t2.json"
 
     def __init__(self, date : dt.date) -> None:
         self.date = date.replace(second=0, microsecond=0, minute=0, hour=0)
-        self.client = Socrata("data.cityofchicago.org", app_token="Ttz4HIh52J3g53HKTYKMNxu4M")
+        self.client = Socrata("data.cityofchicago.org", app_token=BaseHook.get_connection("CITY_OF_CHICAGO_APP_TOKEN").password)
 
         # Get all the updates in the last week.
         self.updated_on_filter = "date_trunc_ymd(updated_on) >= '"+ dt.datetime.strftime(self.date,'%Y-%m-%d') +"'"
