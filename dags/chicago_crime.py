@@ -11,13 +11,17 @@ from airflow.operators.email_operator import EmailOperator
 import datetime as dt
 import pendulum
 
+from airflow.models import Variable
+
 
 local_tz = pendulum.timezone('America/Chicago')
 
-def run_etl(ds=None):
-    extract=Extract(dt.datetime.strptime(ds,'%Y-%m-%d'))
+def run_etl(**kwargs):
+    start_time = kwargs.get('templates_dict').get('start_time',None)
+    end_time = kwargs.get('templates_dict').get('end_time',None)
+    extract=Extract(start_time,end_time)
     df = extract.execute_extraction()
-    if df:
+    if not df.empty:
         transform = Transformation(df)
         transformed_df = transform.convert_datatype_datalake()
         load = LoadToDataLake('af_data_lake','crime_data')
@@ -26,8 +30,8 @@ def run_etl(ds=None):
 default_args = {
     'retries' : 0,
     'retry_delay' : dt.timedelta(minutes=1),
-    'email_on_retry' : False,
-    'email_on_failure' : False,
+    'email_on_retry' : True,
+    'email_on_failure' :True,
     'email': ['prabhakaran.mails@gmail.com']
 }
 
@@ -43,6 +47,8 @@ dag = DAG(
 t1 = PythonOperator(
     task_id = 'run_etl',
     python_callable=run_etl,
+    templates_dict = {'start_time': "{{ prev_execution_date.strftime('%Y-%m-%dT%H:%M:%S') }}", 'end_time': "{{ execution_date.strftime('%Y-%m-%dT%H:%M:%S') }}"},
+    provide_context=True,
     dag=dag
 )
 
