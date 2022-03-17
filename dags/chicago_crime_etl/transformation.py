@@ -32,7 +32,7 @@ class Transformation:
             self.data[col] = self.data[col].astype('bool')
         
     
-        self.data['location'] = self.data['location'].apply(lambda x: json.dumps(x))
+        self.data['location'] = self.data['location'].apply(lambda x: self.dict_clean(x))
 
 
         self.data = self.data.replace({np.nan: None})
@@ -42,3 +42,11 @@ class Transformation:
 
         print(self.data['db_updated_on'])
         return self.data
+    
+    def dict_clean(x):
+        if not x:
+            return None
+        for k,v in x.items():
+            if k == 'latitude' or k=='longitude':
+                x[k] = float(x[k])
+        return x
