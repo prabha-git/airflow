@@ -16,14 +16,12 @@ class Transformation:
         for col in date_columns:
             self.data[col] = self.data[col].astype('datetime64[ns]')
         
-        #float_columns = ['x_coordinate','y_coordinate','latitude','longitude']
-        float_columns=[]
+        float_columns = ['x_coordinate','y_coordinate','latitude','longitude']
         for col in float_columns:
             self.data[col] = self.data[col].astype('float')
         
 
-        #int_columns = ['id','year']
-        int_columns = []
+        int_columns = ['id','year']
         for col in int_columns:
             self.data[col] = self.data[col].astype('int64')
         
@@ -35,12 +33,12 @@ class Transformation:
         self.data['location'] = self.data['location'].apply(lambda x: self.dict_clean(x))
 
 
-        self.data = self.data.replace({np.nan: None})
+        
 
         self.data['db_updated_on'] = dt.datetime.now()
         self.data['db_updated_on'] = self.data['db_updated_on'].astype('datetime64[ns]')
-
-        print(self.data['db_updated_on'])
+        
+        self.data = self.data.replace({np.nan: None})
         return self.data
     
     def dict_clean(x):
@@ -49,4 +47,6 @@ class Transformation:
         for k,v in x.items():
             if k == 'latitude' or k=='longitude':
                 x[k] = float(x[k])
+            if k == 'human_address':
+                x[k]={}
         return x
