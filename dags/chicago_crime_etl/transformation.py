@@ -29,6 +29,7 @@ class Transformation:
         for col in bool_columns:
             self.data[col] = self.data[col].astype('bool')
         
+        self.data['location'].fillna("",inplace=True)
     
         self.data['location'] = self.data['location'].apply(lambda x: self.dict_clean(x))
 
@@ -41,9 +42,10 @@ class Transformation:
         self.data = self.data.replace({np.nan: None})
         return self.data
     
-    def dict_clean(x):
+    def dict_clean(self,x):
         if not x:
             return None
+        print(x)
         for k,v in x.items():
             if k == 'latitude' or k=='longitude':
                 x[k] = float(x[k])

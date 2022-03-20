@@ -38,7 +38,7 @@ default_args = {
 dag = DAG(
     'chicago_crime_pipeline5',
     default_args=default_args,
-    start_date=dt.datetime(2022,3,1,tzinfo=local_tz),
+    start_date=dt.datetime(2022,3,16,tzinfo=local_tz),
     schedule_interval='0 0 * * *',
     catchup=True
 )
