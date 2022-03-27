@@ -5,6 +5,7 @@ from chicago_crime_etl.load_to_datalake import LoadToDataLake
 from airflow.operators.python_operator import PythonOperator
 from airflow import DAG
 from airflow.contrib.operators.bigquery_check_operator import BigQueryCheckOperator
+from airflow.contrib.operators.bigquery_operator import BigQueryOperator
 from airflow.operators.bash_operator import BashOperator
 from airflow.operators.email_operator import EmailOperator
 
@@ -67,5 +68,13 @@ email = EmailOperator(
         dag=dag
 )
 
+warehouse_load = BigQueryOperator(
+    task_id  = 'load_to_wh',
+    sql = 'warehouse_load.sql',
+    create_disposition = False,
+    write_disposition = False,
+    schema_update_options=False
+)
 
-t1 >> t2 >> email
+
+t1 >> t2 >> [email,warehouse_load]
