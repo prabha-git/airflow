@@ -14,6 +14,8 @@ import pendulum
 
 from airflow.models import Variable
 
+from dags.chicago_crime_etl.load_to_datalake import LoadToDataWarehouse
+
 
 local_tz = pendulum.timezone('America/Chicago')
 
@@ -27,6 +29,11 @@ def run_etl(**kwargs):
         transformed_df = transform.convert_datatype_datalake()
         load = LoadToDataLake('af_data_lake','crime_data')
         load.execute_load(transformed_df)
+
+def load_to_wh():
+    # Load to Warehouse
+    load_wh = LoadToDataWarehouse()
+    load_wh.execute_load()
 
 default_args = {
     'retries' : 0,
@@ -68,12 +75,10 @@ email = EmailOperator(
         dag=dag
 )
 
-warehouse_load = BigQueryOperator(
+warehouse_load = PythonOperator(
     task_id  = 'load_to_wh',
-    sql = 'warehouse_load.sql',
-    create_disposition = False,
-    write_disposition = False,
-    schema_update_options=False
+    python_callable=load_to_wh,
+    dag=dag
 )
 
 
