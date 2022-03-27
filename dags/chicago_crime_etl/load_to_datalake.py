@@ -22,3 +22,18 @@ class LoadToDataLake:
         job = self.bq_client.load_table_from_dataframe(df_to_insert,self.table_id,self.job_config)
         print(f"job results is {job.result()}")
 
+
+class LoadToDataWarehouse:
+
+    def __init__(self):
+        self.bq_client = bigquery.Client()
+        sql_file = open("../warehouse_load.sql",'r')
+        self.sql = sql_file.read()
+        sql_file.close()
+
+    def execute_load(self) -> None:
+        result = self.bq_client.query(self.query).result()
+
+
+
+
