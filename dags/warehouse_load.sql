@@ -1,5 +1,7 @@
 DECLARE fields STRING;
 DECLARE updates STRING;
+DECLARE fields_hist STRING;
+DECLARE fields_hist_value STRING;
 EXECUTE IMMEDIATE (
      "SELECT STRING_AGG(column_name) FROM `airflow-341215.af_data_warehouse`.INFORMATION_SCHEMA.COLUMNS WHERE table_name = 'crime_data_curr'"
   ) INTO fields;
@@ -16,15 +18,11 @@ EXECUTE IMMEDIATE (
   WHEN MATCHED and s.updated_on > t.updated_on THEN 
     UPDATE SET """||updates||"""
   WHEN NOT MATCHED THEN
-    INSERT ("""||fields||""") VALUES ("""||fields||""")"""
+    INSERT ("""||fields||""") VALUES ("""||fields||""")""";
 
 
 -- Hist Table 
 -- Stage 1, to insert new record and expire existing record.
-DECLARE fields STRING;
-DECLARE fields_hist STRING;
-DECLARE updates STRING;
-DECLARE fields_hist_value STRING;
 EXECUTE IMMEDIATE (
      "SELECT STRING_AGG(column_name) FROM `airflow-341215.af_data_warehouse`.INFORMATION_SCHEMA.COLUMNS WHERE table_name = 'crime_data_curr'"
   ) INTO fields;
@@ -44,13 +42,9 @@ set fields_hist_value = concat(fields,",True,'2099-12-31'");
     UPDATE SET record_expr_date = DATETIME_SUB(S.updated_on,INTERVAL 1 SECOND),
               is_active = False
   WHEN NOT MATCHED THEN
-    INSERT ("""||fields_hist||""") VALUES ("""||fields_hist_value||""")"""
+    INSERT ("""||fields_hist||""") VALUES ("""||fields_hist_value||""")""";
 
     -- Stage 2
-DECLARE fields STRING;
-DECLARE fields_hist STRING;
-DECLARE updates STRING;
-DECLARE fields_hist_value STRING;
 EXECUTE IMMEDIATE (
      "SELECT STRING_AGG(column_name) FROM `airflow-341215.af_data_warehouse`.INFORMATION_SCHEMA.COLUMNS WHERE table_name = 'crime_data_curr'"
   ) INTO fields;
@@ -67,4 +61,4 @@ set fields_hist_value = concat(fields,",True,'2099-12-31'");
   USING `airflow-341215.af_data_warehouse.crime_data_curr` S
     ON T.id = S.id and T.updated_on = S.updated_on
   WHEN NOT MATCHED THEN
-    INSERT ("""||fields_hist||""") VALUES ("""||fields_hist_value||""")"""
+    INSERT ("""||fields_hist||""") VALUES ("""||fields_hist_value||""")""";

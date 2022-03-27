@@ -27,12 +27,12 @@ class LoadToDataWarehouse:
 
     def __init__(self):
         self.bq_client = bigquery.Client()
-        sql_file = open("../warehouse_load.sql",'r')
+        sql_file = open("/home/prabhakaran_mails/airflow/dags/warehouse_load.sql",'r')
         self.sql = sql_file.read()
         sql_file.close()
 
     def execute_load(self) -> None:
-        result = self.bq_client.query(self.query).result()
+        result = self.bq_client.query(self.sql).result()
 
 
 

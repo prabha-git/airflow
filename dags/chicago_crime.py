@@ -14,7 +14,7 @@ import pendulum
 
 from airflow.models import Variable
 
-from dags.chicago_crime_etl.load_to_datalake import LoadToDataWarehouse
+from chicago_crime_etl.load_to_datalake import LoadToDataWarehouse
 
 
 local_tz = pendulum.timezone('America/Chicago')
