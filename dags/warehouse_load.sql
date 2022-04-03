@@ -2,23 +2,34 @@ DECLARE fields STRING;
 DECLARE updates STRING;
 DECLARE fields_hist STRING;
 DECLARE fields_hist_value STRING;
+DECLARE updates_w_first_arrest STRING;
+DECLARE fields_w_first_arrest STRING;
+DECLARE field_values_w_first_arrest STRING;
+DECLARE field_values_wo_first_arrest STRING;
 EXECUTE IMMEDIATE (
-     "SELECT STRING_AGG(column_name) FROM `airflow-341215.af_data_warehouse`.INFORMATION_SCHEMA.COLUMNS WHERE table_name = 'crime_data_curr'"
+     "SELECT STRING_AGG(column_name) FROM `airflow-341215.af_data_lake`.INFORMATION_SCHEMA.COLUMNS WHERE table_name = 'crime_data' and column_name not in ('db_updated_on')"
   ) INTO fields;
 EXECUTE IMMEDIATE (
-    """WITH t AS (SELECT column_name FROM `airflow-341215.af_data_warehouse`.INFORMATION_SCHEMA.COLUMNS WHERE table_name = 'crime_data_curr')
+    """WITH t AS (SELECT column_name FROM `airflow-341215.af_data_lake`.INFORMATION_SCHEMA.COLUMNS WHERE table_name = 'crime_data' and column_name not in ('db_updated_on'))
        SELECT STRING_AGG("t."||column_name ||" = "|| "s."||column_name) from t join t as s using(column_name)"""
   ) INTO updates;
 
-
+set updates_w_first_arrest= concat(updates,",t.first_arrest_date=date(s.updated_on)");
+set fields_w_first_arrest = concat(fields,",first_arrest_date");
+set field_values_w_first_arrest = concat(fields,",date(updated_on)");
+set field_values_wo_first_arrest = concat(fields,",NULL");
   EXECUTE IMMEDIATE """
   MERGE `airflow-341215.af_data_warehouse.crime_data_curr` T
   USING `airflow-341215.af_data_lake.crime_data` S
     ON T.id = S.id
+  WHEN MATCHED and s.updated_on > t.updated_on and S.arrest=True and T.arrest=False THEN 
+  UPDATE SET """||updates_w_first_arrest||"""
   WHEN MATCHED and s.updated_on > t.updated_on THEN 
     UPDATE SET """||updates||"""
+  WHEN NOT MATCHED and s.arrest=True THEN
+    INSERT ("""||fields_w_first_arrest||""") VALUES ("""||field_values_w_first_arrest||""")
   WHEN NOT MATCHED THEN
-    INSERT ("""||fields||""") VALUES ("""||fields||""")""";
+    INSERT ("""||fields_w_first_arrest||""") VALUES ("""||field_values_wo_first_arrest||""")""";
 
 
 -- Hist Table 
